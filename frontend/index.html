@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="message"></div>
+  <script>
+
+    fetch('http://localhost:8000')
+      .then(response => response.json())
+      .then(data => {
+        document.querySelector("#message").textContent = data.greeting;
+      })
+      .catch(e => {
+        console.log('e', e)
+      })
+
+  </script>
+</body>
+</html>
