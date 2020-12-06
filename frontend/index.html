@@ -9,10 +9,19 @@
   <div id="message"></div>
   <script>
 
-    fetch('http://localhost:8000')
+    fetch('http://localhost:8000/wp-json/wp/v2/pages/?slug=privacy-policy')
       .then(response => response.json())
       .then(data => {
-        document.querySelector("#message").textContent = data.greeting;
+        document.querySelector("#message").innerHTML = `
+          <div>
+          <h1>
+            ${data[0].title.rendered}
+          </h1>
+          <div>
+            ${data[0].content.rendered}
+          </div>
+          </div>
+        `;
       })
       .catch(e => {
         console.log('e', e)

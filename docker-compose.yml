@@ -27,5 +27,11 @@ services:
      volumes: 
        - "./wp-content:/var/www/html/wp-content"
        - "./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini"
+    
+   webserver:
+      image: httpd:2.4-alpine
+      restart: always
+      volumes: 
+       - "./httpd.conf:/usr/local/apache2/conf/httpd.conf"
 volumes:
     db_data: {}
