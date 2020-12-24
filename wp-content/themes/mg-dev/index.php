@@ -1,6 +1,8 @@
 <?
-header('Access-Control-Allow-Origin: http://localhost:8001');
-header('Content-Type: application/json');
-echo json_encode(
-  ['greeting' => 'Hello, world!']
-);
+
+/**
+ * WP HEADLESS 💕
+ * Prevent public access to theme routes
+ */
+// header('Location: https://michaelgale.dev');
+// exit();

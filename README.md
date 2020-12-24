@@ -2,10 +2,12 @@
 
 Wordpress in a docker container, with an example front end.
 
-## Backend 
+## Install Docker (macOS)
 
-`docker-compose up -d` 
+## Fire up the containers (WP @ localhost:8000)
 
-## Frontend
+`docker-compose up -d`
 
-`php -S localhost:8001 # Navigate to /frontend`
+## Tear containers down
+
+`docker-compose down`
