@@ -1,14 +1,10 @@
 <?
+  /**
+   * DEFINE CONSTANTS
+   */
+  define('FUNCTIONS_PATH', get_template_directory() . '/functions');
 
-  // echo "Hello, ";
-
-  // if (function_exists('wp_get_environment_type')) {
-  //   if (wp_get_environment_type() == 'local') {
-      
-  //     echo "local!";
-    
-  //   } else {
-  //     echo "production!";
-  //   }
-  // }
-
+  /**
+   * IMPORT FUNCTIONS
+   */
+  require_once(FUNCTIONS_PATH . '/setup.php');
