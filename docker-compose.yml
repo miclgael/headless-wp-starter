@@ -26,7 +26,8 @@ services:
       WORDPRESS_DB_NAME: wordpress
       WORDPRESS_DEBUG: 1
       WORDPRESS_CONFIG_EXTRA: |
-        define('WP_ENVIRONMENT_TYPE', 'local');
+        define( 'WP_ENVIRONMENT_TYPE', 'local' );
+        define( 'WP_DEBUG_DISPLAY', true);
     volumes: 
       - "./wp-content:/var/www/html/wp-content"
       - "./environment/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini"
