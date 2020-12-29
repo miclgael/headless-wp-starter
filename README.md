@@ -1,4 +1,4 @@
-# content.michaelgale.dev
+# 📝 content.michaelgale.dev
 
 Wordpress in a docker container, with an example front end.
 
