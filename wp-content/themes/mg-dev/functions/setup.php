@@ -1,5 +1,19 @@
 <?
-  
+  /**
+   * Default Wordpress loop
+   *
+   * @return  void
+   */
+  function wp_default_loop() {
+    get_header();
+    if (have_posts()) : while (have_posts()) : the_post();
+      the_title();
+      the_content();
+    endwhile; endif;
+    get_sidebar();
+    get_footer();
+  }
+
   /**
    * Fix lists for screen-readers in Safari/Webkit for `ul { list-style: none; }`
    * 
