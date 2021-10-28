@@ -1,4 +1,4 @@
-<?
+<?php
   /**
    * Default Wordpress loop
    *
